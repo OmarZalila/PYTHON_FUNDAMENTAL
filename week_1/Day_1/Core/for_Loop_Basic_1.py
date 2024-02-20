@@ -25,3 +25,6 @@ for x in range(2018,0,-4) :
 for x in range(lowNum,highNum+1):
     if x % mult ==0 :
         print(x)
+
+
+
