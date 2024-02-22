@@ -27,7 +27,11 @@ students = [
     ]
 def iterateDictionary(list_students) :
     for x in range(len(list_students)):
-        print(students[x])
+        for key, val in (list_students[x]).items():
+            print(key , "-" , val)
+        
+        
+        # print(f"{"first_name"} - {students[x]["first_name"]}")
 iterateDictionary(students)
 # 3-Get Values From a List of Dictionaries
 def iterateDictionary2(key_name,list_student):
