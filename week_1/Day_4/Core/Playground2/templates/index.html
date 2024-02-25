@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1> Welcome ! </h1>
+    <main>
+        {% for i in range(0,time) : %}
+        <div class="box"></div>
+        {% endfor %}
+    </main>
+    
+</body>
+</html>
+<style>
+    *{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    padding: 100px 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+}
+h1{
+    text-align: center;
+}
+main{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    .box{
+        width: 200px;
+        height: 200px;
+        border: 2px solid black;
+        background-color: aqua;
+        border-radius: 15px;
+
+    }
+}
+</style>
