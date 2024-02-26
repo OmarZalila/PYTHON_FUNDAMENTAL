@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <table class="tab">
+        <tr class="head">
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Full Name</th>
+        </tr>
+        {%for user in person %}
+        <tr>
+            <td>{{user.first_name}}</td>
+            <td>{{user.last_name}}</td>
+            <td>{{user.first_name}} {{user.last_name}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+<!-- <style>
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 5px auto;
+    width: 700px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+td {
+    border-top: 1px solid rgb(141, 136, 136); 
+    padding: 8px;
+    text-align: center;
+}
+th{
+    padding: 8px;
+    text-align: center;
+    background-color: rgb(52,58,62);
+    color:rgb(229,174,19);
+}
+tr:hover{
+    background-color: rgb(216, 213, 213);
+
+}
+</style> -->
