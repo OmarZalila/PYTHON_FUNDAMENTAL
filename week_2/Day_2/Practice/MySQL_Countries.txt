@@ -20,7 +20,7 @@ ORDER BY cities.population DESC;
 
 #================== countries ================================
 
-SELECT * FROM world.countries
+SELECT countries.name , languages.language, languages.percentage FROM world.countries
 JOIN languages ON countries.id = languages.country_id
 WHERE languages.percentage > 89
 ORDER BY languages.percentage DESC;
