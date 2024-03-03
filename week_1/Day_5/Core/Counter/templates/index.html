@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body style="padding: 100px 200px;">
+    <div>
+        <div style="display: flex; justify-content: space-around; text-align: center;">
+            <div>
+                <h1>Counter</h1>
+                <p style="font-size: 25px;">{{session["count"]}}</p>
+                <div style="display: flex; gap: 15px;">
+                    <form style="box-shadow: 4px 4px 2px black;" action="/count">
+                        <button style="background-color: rgb(65, 190, 40); color: white;"> Click </button>
+                    </form>
+                    <form style="box-shadow: 4px 4px 2px black;" action="/destroy_session">
+                        <button style="background-color: rgb(197, 38, 38); color: white;"> Reset</button>
+                    </form>
+                </div>
+                    <form style="margin-top: 10px;" action="/increase_by_2">
+                        <button style="box-shadow: 4px 4px 2px black; background-color: rgb(51, 44, 161); color: white;" > +2 </button>
+                    </form>
+            </div>
+            <div>
+                <h1>Visits</h1>
+                <p style="font-size: 25px;">{{session["visit"]}}</p>
+            </div>
+        </div>
+        
+        
+    </div>
+    <div>
+        <form style="margin-top: 100px; text-align: center;" action="/Add_Number" method="post">
+            <label style="font-weight: bold;" for="number"> Enter Number :</label>
+            <input type="number" name="numbeeer" id="number">
+            <button style="box-shadow: 4px 4px 2px black; background-color: rgb(48, 153, 185); color: white;"> increment </button>
+        </form>
+    </div>
+
+</body>
+</html>
