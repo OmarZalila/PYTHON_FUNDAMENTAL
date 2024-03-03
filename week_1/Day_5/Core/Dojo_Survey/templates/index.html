@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Dojo_Survey</title>
+</head>
+<body>
+    <div style=" height: 540px; width: 400px;margin: 50px auto; padding: 50px;background-color:#33393E; ">
+        <h1 style="color: #FEC008;">Dojo Survey</h1>
+        <form action="/submit" method="post">
+            <div style="display: flex;flex-direction: column;">
+                <label style="color: white;" for="">Name:</label>
+                <input style="border-radius: 5px; border: 1px solid black; height: 35px;" type="text" name="name">
+            </div>
+            <div style="display: flex;flex-direction: column;">
+                <label style="color: white;" for="">Dojo Location:</label>
+                <select style="border: 1px solid black;" class="form-select" name="location">
+                    <option value="">Select~A~Location:</option>
+                    <option value="San Jose">San Jose</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Moscow">Moscow</option>
+                </select>
+            </div>
+            <div style="display: flex;flex-direction: column; border-radius: 15px;">
+                <label style="color: white;" for="">Favorite Language:</label>
+            <select style="border: 1px solid black;"class="form-select" name="language">
+                <option selected>Select~A~Language</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+                <option value="C#">C#</option>
+            </select>
+            </div>
+            <div>
+                <label style="color: white;" for="">Comment (optional):</label>
+                <br>
+                <textarea style="border-radius: 15px;" name="Comment"  cols="38" rows="7"></textarea>
+            </div>
+            <button style="background-color:#FEC008; ">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
