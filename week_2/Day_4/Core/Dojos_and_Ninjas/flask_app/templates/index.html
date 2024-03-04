@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Dojo_web</title>
+</head>
+<body style="margin: 50px; display: flex; justify-content: center; gap: 200px;" >
+    <div style="display: flex; flex-direction: column; gap: 100px;">
+        <div style="width: 300px;height: 220px; background-color:#33393F; padding: 30px;">
+            <h1 style="margin-bottom: 10px; text-align: center; color: rgb(56, 137, 212);">New Dojo</h1>
+            <form style="display: flex; flex-direction: column;" action="/add_new" method="post">
+                <label style="margin-bottom: 5px; color: white; font-size: 20px;" for="">Name :</label>
+                <input class="form" type="text" name="name" required>
+                <button style="width: 120px; height: 30px; border-radius: 5px; margin-top: 10px; background-color:rgb(56, 137, 212) ;"> Add Dojo</button>
+            </form>
+        </div>
+        <a href="/add_ninja">Add Ninja</a>
+    </div>
+    <span style="width: 300px; background-color:#33393F; padding: 30px;">
+        <h1 style="margin-bottom: 10px; text-align: center; color: rgb(56, 137, 212);"> All Dojos </h1>
+        <span style="display: flex ; flex-direction: column; text-align: center;">
+            {% for dojo in all_dojos %}
+            <a style=" color: #d1a648; margin-bottom: 8px;" href="/dojos/{{dojo.id}}"> {{dojo.name}} </a>
+            {% endfor %}
+        </span>
+    </span>
+    
+
+</body>
+</html>
