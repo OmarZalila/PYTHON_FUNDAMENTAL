@@ -7,9 +7,16 @@
     <title>Dojo_Survey</title>
 </head>
 <body>
-    <div style=" height: 540px; width: 400px;margin: 50px auto; padding: 50px;background-color:#33393E; ">
+    <div style=" height: auto; width: 400px;margin: 50px auto; padding: 50px;background-color:#33393E; ">
         <h1 style="color: #FEC008;">Dojo Survey</h1>
         <form action="/submit" method="post">
+            {% with messages = get_flashed_messages() %}    
+                {% if messages %}                            
+                    {% for message in messages %}            
+                        <p style="color: red;">{{message}}</p>                   
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
             <div style="display: flex;flex-direction: column;">
                 <label style="color: white;" for="">Name:</label>
                 <input style="border-radius: 5px; border: 1px solid black; height: 35px;" type="text" name="name">
@@ -26,7 +33,7 @@
             <div style="display: flex;flex-direction: column; border-radius: 15px;">
                 <label style="color: white;" for="">Favorite Language:</label>
             <select style="border: 1px solid black;"class="form-select" name="language">
-                <option selected>Select~A~Language</option>
+                <option value="">Select~A~Language</option>
                 <option value="Python">Python</option>
                 <option value="Java">Java</option>
                 <option value="C#">C#</option>
@@ -35,7 +42,7 @@
             <div>
                 <label style="color: white;" for="">Comment (optional):</label>
                 <br>
-                <textarea style="border-radius: 15px;" name="Comment"  cols="38" rows="7"></textarea>
+                <textarea style="border-radius: 15px;" name="comment"  cols="38" rows="7"></textarea>
             </div>
             <button style="background-color:#FEC008; ">Submit</button>
         </form>
